@@ -46,15 +46,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 
 	for _, event := range events {
 		switch event.Type {
-		
-			case linebot.EventTypeBeacon:
-			log.Println(" Beacon event....")
-			if b := event.Beacon; b.type := "leave" {
-				ret := fmt.Sprintln("Msg1:", string(b.DeviceMessage), " hwid:", b.Hwid, "0:", b)
-				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(ret)).Do(); err != nil {
-					log.Print(err)
-				}
-			}
+	
 			
 			case linebot.EventTypeBeacon:
 			log.Println(" Beacon event....")
