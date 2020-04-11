@@ -49,7 +49,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		case linebot.EventTypeBeacon:
 			log.Println(" Beacon event....")
 			if b := event.Beacon; b != nil {
-				ret := fmt.Sprintln("Msg:", string(b.DeviceMessage), " hwid:", b.Hwid)
+				ret := fmt.Sprintln("Msg87:", string(b.DeviceMessage), " hwid:", b.Hwid)
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(ret)).Do(); err != nil {
 					log.Print(err)
 				}
