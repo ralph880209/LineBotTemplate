@@ -51,7 +51,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			case linebot.EventTypeBeacon:
 			log.Println(" Beacon event....")
 			if b := event.Beacon; b != nil {
-				ret := fmt.P("救護車接近提醒🚑🚑\r\n請放慢車速小心駕駛！")
+				ret := fmt.Print("救護車接近提醒🚑🚑\r\n請放慢車速小心駕駛！")
 				
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(ret)).Do(); err != nil {
 					log.Print(err)
